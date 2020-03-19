@@ -17,16 +17,17 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+
 @Entity
 @Table(name="tbl_book")
 @Setter
 @Getter
 @ToString
 public class Book {
-
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private long id;
+	private Long id;
 	
 	private String sku;
 	
@@ -50,10 +51,9 @@ public class Book {
 	
 	@Column(name="last_updated")
 	private Date updatedOn;
-	
-	
-	
+
 	@ManyToOne
 	@JoinColumn(name="category_id", nullable=false)
 	private BookCategory category;
+	
 }

@@ -32,5 +32,5 @@ public class BookCategory {
 	
 	@OneToMany(cascade=CascadeType.ALL, mappedBy="category")
 	private Set<Book> book;
-
 }
+
